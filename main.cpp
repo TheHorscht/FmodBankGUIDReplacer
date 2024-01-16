@@ -205,7 +205,7 @@ int main(int argc, char** argv) {
             vector<uint8_t> GUID(17);
             GUID[16] = 0;
             buffer.copy((char*)&GUID[0], 16, i + 1 + 4);
-            // cout << "Found a GUID at offset " << GUIDstartPos << " - " << ByteArrayToGUIDString(GUID) << " - " << ByteArrayToString(GUID) << endl;
+            cout << "Found a GUID at offset " << GUIDstartPos << " - " << ByteArrayToGUIDString(GUID) << " - " << ByteArrayToString(GUID) << endl;
             for(auto it = guidReplacePairs.begin(); it != guidReplacePairs.end(); it++) {
               const string lookFor = get<0>(*it);
               const string replaceWith = get<1>(*it);
